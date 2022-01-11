@@ -14,20 +14,5 @@ namespace ToDoListXamarin
         {
             InitializeComponent();
         }
-
-        public void HandleTextChanged(object sender, TextChangedEventArgs args)
-        {
-            Console.WriteLine(args.NewTextValue);
-        }
-
-        public void HandleEnterPress(object sender, EventArgs args)
-        {
-            Console.WriteLine("Enter Pressed");
-            Label newToDo = new Label();
-            newToDo.Text = InputField.Text;
-            newToDo.FontSize = 20;
-            ToDoList.Children.Add(newToDo);
-            InputField.Text = "";
-        }
     }
 }
